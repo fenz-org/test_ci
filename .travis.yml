@@ -10,7 +10,7 @@ env:
     - secret: "GVDjQY+Z9Aqt/tV0Qv5AFG7vxdAVwFDCS4+ODfCseUA6LjW0HdQYyNLFRqFSadCh3NBFNwv2bcaAXWmDnZYyYcrHKsM/7yjqv0cCZXCNlr3gIiKFCkkycIKWwqdXLsCo1X7NmUnVoK8+pMTX5IC62fKN6ugVf7pBXTF3sbOssOiimVt0XmHGcLrgHcPaaSIizOo+ZUIFii+Jvv3QUP9Wbe4nrT7xv0aiiSsyG6GryY9TUCBoARrU7KXFepDRSUK6tMOEHRMy7IslS2OjOEAqEBnlMxoOVD0jYBaiqK0ESWaWH6gYeWltSaDdcag5Eb7pidDUie4yWDwfb6rc57kK+wU+Laux65GTmyaKMNBWl+1WeoX2MYixKFjCLvTTjpMEZoR0WDogZj24FhUHy06bWi9hVd+JjKSDk1m75sBRawXK8Tj+Bq0owey/T4abILTx5DYMyKOljkp2xo9QYP3mg6oLLrlueQ5XzB39rh4SIwV2XOHvVEHflRCRJv+zt+xEoepH6nuY/qpwsZ0ye9dtoCXSXwkKYS+pPf+LPDAxY/PUrj2uOzGZ6Izd/cMZ81SY/HNpeB/YiKEHylslrTvmqglRDbWmTYg0+nayLlxar+PUpYSI24W/A2jBIX+jWQrTySltgrRfbdGkwzMYWp6TrWVbQ17CY0LFNMa7t34PZvg="
 
 script:
-  - docker build --tag reprova/test-ci .
+  - docker build --tag reprova/test-ci -f subfolder/Dockerfile .
   - docker run reprova/test-ci
 
 before_deploy:
