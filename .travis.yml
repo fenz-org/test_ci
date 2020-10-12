@@ -1,10 +1,13 @@
-sudo: required
+os: linux
+dist: xenial
+language: minimal
 
 services:
   - docker
 
 script:
   - printenv
+  - docker images
 
 #before_deploy:
 #  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
