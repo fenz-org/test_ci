@@ -5,25 +5,19 @@ services:
   - docker
 env:
   global:
-    - secure: "YTKKwniujI5nSbEuER2TPtKSKugMIHam1g4omAl6M88iFa45SQMCRBLesBiQl1mPiCp6T193QZ9/IP6MlkGHwQ8sYfV/sUnYVplofCUiXvtcsxwivS+wXi2huyWplRK/QmUIByDxRZ1jIEG4Iezx4Jkqi4I1YK+UkJXEqsm+oOUGtMnZzX0j1gfMB7n0z8xCBntnX/pjOA/7Fv+uwIDJUo1QKtCl2pZMCtklP4nkHOE/k3121S8bTagSKkZgLjTtdiUezm7VWRKjc5rj+Dj72LuVFwib0lKv3EHkCtiuE1wsCUFN+qSPvkcCi4oIHqXbwAcvyS+6sQMFMu0H+EGMWIOohp2eCubmK2dRVkePFt2lq5v4SWAVOBwp8lUa0aWRpGhDVJvRTap6SfnRac1o2YxoDDNa2cymSQWK6QMlo2MQ1HKqCqS36HUUiTEKnGFxTr2owL+83v+Dqoaq40u9LOTk1VN7PD2vEcqOd9yMQXRTP71j9mvXxZUA1T0bdG5bI+qfDa8/Brg9vL1piSjIHp1nv67mbE+CC8teuUnVLLLXTCrQpwB1HMARoJ+AgURTShpdBFycjjA6+TgqWmE+TxpZrA0uKdymfZHrIkDLkt/a3rrXBHMxHrTjg9EHxySJTgFycoP0cQzVzNgUx3FXOibrUzsp9l7hAz0tWjqQFPs="
-    - TEST2="test2"
-#    - DOCKER_USER=reprova
-#    # DOCKER_PASSWORD="..."
-#    - secret: "GVDjQY+Z9Aqt/tV0Qv5AFG7vxdAVwFDCS4+ODfCseUA6LjW0HdQYyNLFRqFSadCh3NBFNwv2bcaAXWmDnZYyYcrHKsM/7yjqv0cCZXCNlr3gIiKFCkkycIKWwqdXLsCo1X7NmUnVoK8+pMTX5IC62fKN6ugVf7pBXTF3sbOssOiimVt0XmHGcLrgHcPaaSIizOo+ZUIFii+Jvv3QUP9Wbe4nrT7xv0aiiSsyG6GryY9TUCBoARrU7KXFepDRSUK6tMOEHRMy7IslS2OjOEAqEBnlMxoOVD0jYBaiqK0ESWaWH6gYeWltSaDdcag5Eb7pidDUie4yWDwfb6rc57kK+wU+Laux65GTmyaKMNBWl+1WeoX2MYixKFjCLvTTjpMEZoR0WDogZj24FhUHy06bWi9hVd+JjKSDk1m75sBRawXK8Tj+Bq0owey/T4abILTx5DYMyKOljkp2xo9QYP3mg6oLLrlueQ5XzB39rh4SIwV2XOHvVEHflRCRJv+zt+xEoepH6nuY/qpwsZ0ye9dtoCXSXwkKYS+pPf+LPDAxY/PUrj2uOzGZ6Izd/cMZ81SY/HNpeB/YiKEHylslrTvmqglRDbWmTYg0+nayLlxar+PUpYSI24W/A2jBIX+jWQrTySltgrRfbdGkwzMYWp6TrWVbQ17CY0LFNMa7t34PZvg="
+    - DOCKER_USER=reprova
+    # DOCKER_PASS="..."
+    - secure: "g11riwLqhtfidpD92e4e9jRwK+owBUzzf9dmpwJ1o/5IOzRdtNQKWzGHqn0Xosk5XQI8ddrEqRVdJdFX2lLQ2IaQQEK4ZfMeji4kKLM7nJ0TZ7lnHVmTvl4JPZiXHsjdhNn1taOBA/Sv1bC1Nr8knj8vBjXXyeBRsRP6JlRHFzp5pQiUz6YGknvUa66g9N0L5f52h+2cXaLH0kBNf80j888dm4PJrmLEPDgx36nGXQ4OiVfuUlxyxMG6QPZ7tTHffYGDynmNOR3FIyEckEhiSG3dbCKR9BchUVB4pBQEoFWw592nKdo3X0kaGD/21CFy+hQFGb8YV2TfMv9zJvdcLvsuvejscIk7mduJGfGh4ylUcKaMtT/YGyxoKWUrdNdck0HAzT2HyypS8tj4DvoZx4Z0iw6rN15U4elbYxDSQZux4KGpzmX9q7hFjpOi4goAHEvX4kBKkVqV+fcoYoQyEgiRsCNeNMiKlTFDiqcqPz5R173Fpn7yibCU/XyACBec83kSrSMpesz/kTyYjJdHpzVq1VczGhg17ZYoYRch8jkSOGOhsGTmzGQgvvfrl2gfHavNuguo8BUcovWRqZkai/s4+Jy6qxIzvkwd4kpWKAKSFq6D2m0Z2TlvVYKFPyueffPUWEIgwgKTkCGkEOLE8GDyILbz7LGzxdN6ss6Tav8="
 
 script:
-  - echo ${SOMEVAR}
-  - echo ${TEST2}
-#  - docker build --tag reprova/test-ci -f subfolder/Dockerfile .
-#  - docker run reprova/test-ci
-#
+  - docker build --tag reprova/test-ci -f subfolder/Dockerfile .
+  - docker run reprova/test-ci
+
 before_deploy:
-  - echo ${SOMEVAR}
-#  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
 
 deploy:
   provider: script
-  script: echo ${SOMEVAR}
-#docker push reprova/test-ci
+  script: docker push reprova/test-ci
   on:
     branch: master
