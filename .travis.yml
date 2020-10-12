@@ -1,0 +1,15 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - printenv
+
+#before_deploy:
+#  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+#deploy:
+#  provider: script
+#  script: docker push myorg/myimage
+#  on:
+#    branch: master
