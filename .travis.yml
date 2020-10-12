@@ -1,17 +1,19 @@
 os: linux
 dist: xenial
-language: minimal
+language: shell
 services:
   - docker
 env:
   global:
     - secret: "KTPbEnQg8yoiVd2hUB67pbazEKLtRR8PBYpbhAJCVz1iftLo1lAmc7z9oc2Zbk5PvGBwwBW+iYq8CNbmqOhDXO1BPdP3zPdz/vOlVSxo2YsuDqRYTaYkGF5d/zsvJcPrTG17nxPCrFKGLrUzNC/eI8qEDREVHqFckkGMjdSPxdmKnpvrHWA5Yh/wvdDZAZguh5EHLOj/cddqr8K47B+RXDktkp4W6+Y5xr2MEL3sJaLpvlbPJ1K8hHY6HYAHsEylZsEnoLQkXOBP+GgMAAYkV2MK0LA2tH5F/o+S3nALYvk2d59WBZkwwqEP2xR5PqDn3Z7a6pr9jqXQVdOTOQfywxwW9z7z1YJHUoZLxf312miN5qiU3MTorcXIdrrXXHgm4ofyPcpqGIl/TO23heBMJoKzTnf/ZOV98VX5U5eeQDjVii3YQsc7+qezvh8sjmLzbyyawMdd9lk/d+ZFS/j7Rpwr0rxoRofQkF3lVyIBEE4aUQpHML8mCfCRo7HVk+yP5EgeFGfGEY2BBwY9uG/1xQpHeXwCE3E1632M/n+fAPjTQZoIU4FUnuxfSDhY4fNpxcdpoxhda8DcqWdFKI4zleaKfD6HZutLCfn2OJjpVqD76Vl1KNao9XpWQCpMYrlOFdaDNWwN5bk4oFWGsdUnqPBQqHAzLSqvQTj+49ONBng="
+    - TEST2="test2"
 #    - DOCKER_USER=reprova
 #    # DOCKER_PASSWORD="..."
 #    - secret: "GVDjQY+Z9Aqt/tV0Qv5AFG7vxdAVwFDCS4+ODfCseUA6LjW0HdQYyNLFRqFSadCh3NBFNwv2bcaAXWmDnZYyYcrHKsM/7yjqv0cCZXCNlr3gIiKFCkkycIKWwqdXLsCo1X7NmUnVoK8+pMTX5IC62fKN6ugVf7pBXTF3sbOssOiimVt0XmHGcLrgHcPaaSIizOo+ZUIFii+Jvv3QUP9Wbe4nrT7xv0aiiSsyG6GryY9TUCBoARrU7KXFepDRSUK6tMOEHRMy7IslS2OjOEAqEBnlMxoOVD0jYBaiqK0ESWaWH6gYeWltSaDdcag5Eb7pidDUie4yWDwfb6rc57kK+wU+Laux65GTmyaKMNBWl+1WeoX2MYixKFjCLvTTjpMEZoR0WDogZj24FhUHy06bWi9hVd+JjKSDk1m75sBRawXK8Tj+Bq0owey/T4abILTx5DYMyKOljkp2xo9QYP3mg6oLLrlueQ5XzB39rh4SIwV2XOHvVEHflRCRJv+zt+xEoepH6nuY/qpwsZ0ye9dtoCXSXwkKYS+pPf+LPDAxY/PUrj2uOzGZ6Izd/cMZ81SY/HNpeB/YiKEHylslrTvmqglRDbWmTYg0+nayLlxar+PUpYSI24W/A2jBIX+jWQrTySltgrRfbdGkwzMYWp6TrWVbQ17CY0LFNMa7t34PZvg="
 
 script:
-  - echo $TEST
+  - echo ${TEST}
+  - echo ${TEST2}
 #  - docker build --tag reprova/test-ci -f subfolder/Dockerfile .
 #  - docker run reprova/test-ci
 #
